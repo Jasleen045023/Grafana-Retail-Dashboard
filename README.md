@@ -1,21 +1,14 @@
 # Real-Time Retail Insights Dashboard
 This dashboard is created on Grafana with a Kaggle dataset streamed via InfluxDB.
 
-
-
+---
 
 ## Contributing
-
 This project is the result of a collaborative effort between [Himanshi Saxena](https://github.com/045019), [Phalit Gupta](https://github.com/Phalit045040) and me, with valuable guidance from Prof. Ashok Harnal. 
 
-
-
+---
 
 ## **Dataset Description**
-
-
-
-
 The **Retail Transactional** dataset represents retail transactional data, offering a comprehensive view of
 * Customer demographics
 * Purchase behavior
@@ -36,10 +29,6 @@ It captures transaction-specific information, including `transaction ID`, last p
 > ***NOTE:*** *The dataset contains some null values and duplicate entries, which have been handled during the preprocessing stage.*
 
 ## **Tags & Fields**
-
-
-
-
 The following are the Tag keys:
 * `City`
 * `State`
@@ -68,11 +57,9 @@ The following are the Field keys:
 * `Total_Amount`
 * `Age`
 
+---
+
 ## **Objectives**
-
-
-
-
 1. Track overall business performance by monitoring key metrics like total purchases, revenue, and active customers in real-time to assess business health.
 
 2. Identify sales trend to analyze time-based sales data to understand seasonal or daily purchase patterns and adjust strategies accordingly.
@@ -89,6 +76,9 @@ The following are the Field keys:
 
 8. Evaluate Logistics and Delivery Strategies by assesing the popularity and effectiveness of various shipping methods to optimize logistics operations and meet customer expectations.
 
+
+---
+
 ## **Dashboard**
 
 
@@ -97,12 +87,9 @@ The following are the Field keys:
 https://github.com/user-attachments/assets/9195fdbb-d436-4793-b202-6845299ffc22
 
 
-
+---
 
 ## **Queries for building Charts**
-
-
-
 
 #### **1. Total Purchases**  
 
@@ -219,13 +206,9 @@ The heatmap visualizes transaction density across product types and time. High-d
 SELECT COUNT("Transaction_ID") AS transaction_count FROM data WHERE time >= now() - 1h GROUP BY time(10m), "Product_Type";
 ```
 
-
+---
 
 ## **Managerial Insights**
-
-
-
-
 Key Managerial Insights for Optimizing Sales, Customer Engagement, and Operational Efficiency:
 
 1. **Monitor Purchase Volume Trends:** Track total purchases to identify seasonal fluctuations or promotional impacts. Align marketing and inventory strategies to maintain a balance between demand and supply chain capacity.
@@ -257,14 +240,10 @@ Key Managerial Insights for Optimizing Sales, Customer Engagement, and Operation
 10. **Balance Payment Method Support:** Support a balanced range of payment methods to cater to diverse customer preferences, while targeting credit card promotions to improve transaction security and processing efficiency.
 
 
-
+---
 
 
 ## **Conclusion**
-
-
-
-
 The dashboard analysis provides actionable insights to enhance business performance. High total purchases and active engagement during peak times indicate strong product demand, suggesting opportunities for targeted marketing campaigns.
 
 Product-wise sales and shipping method preferences inform inventory planning and logistics strategies. Optimizing high-revenue categories, addressing low-performing categories, and resolving negative feedback are essential for improving customer satisfaction and loyalty.
@@ -272,9 +251,8 @@ Product-wise sales and shipping method preferences inform inventory planning and
 A tailored approach to customer engagement, including gender-specific campaigns and leveraging peak transaction times, can further boost sales. By combining these strategies with data-driven decision-making, businesses can effectively navigate market dynamics and achieve sustainable growth.
 
 
-
+---
 
 ## License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
